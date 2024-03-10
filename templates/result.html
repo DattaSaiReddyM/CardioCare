@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardio CARE: Heart Health Analyzer</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Title -->
+        <div class="container">
+            <h2 class='container-heading'><span class="heading_font">Cardio CARE: Heart Health Analyzer</span></h2>
+            <div class='description'>
+                <p>A Flask-based web application employing various Machine Learning Algorithms to predict the likelihood of heart disease</p><br>
+                <p>(Evaluation: Random Forest Model achieves the highest accuracy rate of 93%)</p>
+            </div>
+        </div>
+
+        <!-- Result -->
+<div class="results">
+    <div class="algorithm-box">
+        <span class="algorithm-name">Random Forest</span><span class="colon">:</span>
+        {% if prediction==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+
+    <div class="algorithm-box">
+        <span class="algorithm-name">Decision Tree</span><span class="colon">:</span>
+        {% if prediction2==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction2==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+
+	<div class="algorithm-box">
+        <span class="algorithm-name">Logistic Regression</span><span class="colon">:</span>
+        {% if prediction3==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction3==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+
+	<div class="algorithm-box">
+        <span class="algorithm-name">K-Nearest Neighbors</span><span class="colon">:</span>
+        {% if prediction4==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction4==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+
+	<div class="algorithm-box">
+        <span class="algorithm-name">Naive Bayes</span><span class="colon">:</span>
+        {% if prediction5==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction5==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+
+	<div class="algorithm-box">
+        <span class="algorithm-name">Support Vector Machine</span><span class="colon">:</span>
+        {% if prediction6==1 %}
+            <span class='danger'>According to this model, you have chances of heart disease</span>
+        {% elif prediction6==0 %}
+            <span class='safe'>According to this model, you are not at risk of heart disease</span>
+        {% endif %}
+    </div>
+</div>
+
+    </body>
+</html>
